@@ -1,8 +1,3 @@
-
----
-
-### **4️⃣ delete.md**
-```markdown
 # Delete Book
 
 ```python
@@ -14,3 +9,9 @@ b.delete()
 
 # Confirm deletion
 Book.objects.all()
+```
+
+**Expected Output:**
+```
+<QuerySet []>
+```

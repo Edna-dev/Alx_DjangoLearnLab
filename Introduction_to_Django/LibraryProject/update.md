@@ -1,8 +1,3 @@
-
----
-
-### **3️⃣ update.md**
-```markdown
 # Update Book Title
 
 ```python
@@ -15,3 +10,9 @@ b.save()
 
 # Verify update
 b.title
+```
+
+**Expected Output:**
+```
+'Nineteen Eighty-Four'
+```
