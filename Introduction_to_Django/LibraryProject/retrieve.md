@@ -16,4 +16,3 @@ b.title, b.author, b.publication_year
 <QuerySet [<Book: Book object (1)>]>
 ('1984', 'George Orwell', 1949)
 ```
-

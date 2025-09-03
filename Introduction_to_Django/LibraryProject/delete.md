@@ -15,4 +15,3 @@ Book.objects.all()
 ```
 <QuerySet []>
 ```
-

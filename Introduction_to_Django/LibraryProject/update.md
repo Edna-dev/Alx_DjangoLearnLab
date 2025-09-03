@@ -16,4 +16,3 @@ b.title
 ```
 'Nineteen Eighty-Four'
 ```
-

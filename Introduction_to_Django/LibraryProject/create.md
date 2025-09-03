@@ -12,5 +12,3 @@ book
 ```
 <Book: Book object (1)>
 ```
-
-
