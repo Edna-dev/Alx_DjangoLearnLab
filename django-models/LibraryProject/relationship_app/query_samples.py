@@ -11,4 +11,5 @@ def list_books_in_library(library_name):
 
 # Retrieve the librarian for a library
 def query_librarian_by_library(library_name):
-    return Librarian.objects.get(library__name=library_name)
+    return Librarian.objects.filter(library__name=library_name).first()
+
