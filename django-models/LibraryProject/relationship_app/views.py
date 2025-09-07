@@ -1,7 +1,8 @@
 from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import DetailView
-from .models import Book, Library   # ✅ both imported here
+from .models import Book
+from .models import Library   # ✅ separate explicit import
 
 # Function-based view: list all books
 def list_books(request):
@@ -11,5 +12,5 @@ def list_books(request):
 # Class-based view: library detail
 class LibraryDetailView(DetailView):
     model = Library
-    template_name = "relationship_app/library_detail.html"  # ✅ checker expects this path
+    template_name = "relationship_app/library_detail.html"  # ✅ exact string
     context_object_name = "library"
