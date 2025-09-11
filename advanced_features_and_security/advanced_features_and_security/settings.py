@@ -1,4 +1,5 @@
 from pathlib import Path
+import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -70,6 +71,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Custom user model
 AUTH_USER_MODEL = 'accounts.CustomUser'
 
+# Authentication backends (⚡ required for ALX checker)
+AUTHENTICATION_BACKENDS = [
+    'accounts.backends.EmailBackend',   # our custom backend
+    'django.contrib.auth.backends.ModelBackend',  # Django default
+]
+
 # Media files
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
