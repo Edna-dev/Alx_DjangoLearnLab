@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
-from .models import CustomUser
+from .models import CustomUser, Book
 
 class CustomUserAdmin(BaseUserAdmin):
     model = CustomUser
@@ -13,4 +13,9 @@ class CustomUserAdmin(BaseUserAdmin):
     list_display = ('username', 'email', 'first_name', 'last_name', 'date_of_birth', 'is_staff')
     search_fields = ('username', 'email', 'first_name', 'last_name')
 
+# ✅ Register only once with your custom admin
 admin.site.register(CustomUser, CustomUserAdmin)
+
+# ✅ Register Book
+admin.site.register(Book)
+
