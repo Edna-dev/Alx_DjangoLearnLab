@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}Django Blog{% endblock %}</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'blog/style.css' %}">
+  <script src="{% static 'blog/script.js' %}" defer></script>
+</head>
+<body>
+  <header>
+    <h1><a href="{% url 'blog:index' %}">My Django Blog</a></h1>
+  </header>
+
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer>
+    <small>© Django Blog</small>
+  </footer>
+</body>
+</html>
