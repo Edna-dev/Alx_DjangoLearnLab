@@ -125,3 +125,13 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# where to redirect after a successful login/logout
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
+# optional: login URL used by @login_required decorator
+LOGIN_URL = '/login/'
+
+# ensure messages framework is available (it is by default), but add template context processor via APP settings is already default.
+

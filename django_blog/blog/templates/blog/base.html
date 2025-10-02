@@ -10,6 +10,24 @@
 <body>
   <header>
     <h1><a href="{% url 'blog:index' %}">My Django Blog</a></h1>
+    <nav>
+      {% if user.is_authenticated %}
+        <span>Hi, {{ user.username }}!</span>
+        <a href="{% url 'blog:profile' %}">Profile</a> |
+
+        <!-- Logout form -->
+        <form method="post" action="{% url 'blog:logout' %}" style="display:inline;">
+          {% csrf_token %}
+          <button type="submit" style="background:none; border:none; color:blue; cursor:pointer;">
+            Logout
+          </button>
+        </form>
+
+      {% else %}
+        <a href="{% url 'blog:login' %}">Login</a> |
+        <a href="{% url 'blog:register' %}">Register</a>
+      {% endif %}
+    </nav>
   </header>
 
   <main>
